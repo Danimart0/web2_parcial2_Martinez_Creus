@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
-import pinaImg from '../items/pina.jpg'; 
+import pinaImg from '../items/pinaf.png'; 
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -63,14 +63,17 @@ const Home = () => {
       </aside>
 
       <main className="content">
-        <div className="hero-section">
-          <div className="hero-content">
-            <h1>Chefs Academy Secrets</h1>
-            <p>New recipe for you to try out, let's cook!</p>
-          </div>
-          <div className="hero-image-wrapper">
+        <div className="hero-section"><div className="hero-image-wrapper">
             <img src={pinaImg} alt="Decoración de piña" />
           </div>
+          <div className="hero-content">
+            <h5 className="hero-title">👨‍🍳HomeChef</h5>
+            <h1 className="line1">Chefs</h1>
+             <h1 className="line2">Academy</h1>
+             <h1 className="line3">Secrets</h1>
+             <p className="hero-description">New recipe for you to try out, let's cook!</p>
+          </div>
+          
         </div>
 
         <div className="search-bar-wrapper">
