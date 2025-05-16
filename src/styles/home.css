@@ -1,13 +1,20 @@
-/* Contenedor principal con fondo oscuro */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0b1120; 
+  color: #c9d1d9;
+  font-family: 'Georgia', serif;
+}
+
 .layout {
   display: flex;
-  background-color: #0b1120; /* fondo oscuro */
-  color: #c9d1d9; /* texto claro */
+  background-color: #0b1120; 
+  color: #c9d1d9; 
   height: 100vh;
   font-family: 'Georgia', serif;
 }
 
-/* Sidebar con categorias */
 .sidebar {
   width: 250px;
   background-color: #121c2c;
@@ -18,13 +25,11 @@
   flex-direction: column;
 }
 
-/* Titulo del sidebar */
 .sidebar h2 {
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-/* Lista de categorias */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -33,7 +38,6 @@
   max-height: 75vh;
 }
 
-/* Cada categoria como botón */
 .sidebar li {
   margin-bottom: 10px;
 }
@@ -55,12 +59,11 @@
 
 .sidebar button:hover,
 .sidebar button.active {
-  background-color: #ffc107; /* color amarillo de selección */
-  color: #121c2c; /* texto oscuro */
+  background-color: #ffc107;
+  color: #121c2c;
   font-weight: 700;
 }
 
-/* Imagen pequeña de categoría */
 .category-thumb {
   width: 40px;
   height: 40px;
@@ -70,7 +73,6 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-/* Contenido principal a la derecha */
 .content {
   flex: 1;
   margin: 20px;
@@ -78,87 +80,112 @@
   flex-direction: column;
 }
 
-/* Imagen grande superior */
-.content .hero-image {
-  position: relative;
-  background-color: #f7f7f7;
-  border-radius: 12px;
-  height: 200px;
-  margin-bottom: 20px;
-  overflow: hidden;
+.hero-section {
   display: flex;
-  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 24px;
   align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.content .hero-image img {
-  max-height: 100%;
+.hero-content {
+  max-width: 60%;
+  color: #1f2937;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.hero-image-wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-/* Texto encima de la imagen grande */
-.content .hero-text {
-  position: absolute;
-  top: 40px;
-  left: 60%;
-  color: #1f2937; /* gris oscuro */
-  font-family: 'Georgia', serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 1.2;
-  user-select: none;
-}
-
-/* Barra de búsqueda */
-.search-bar {
+.search-bar-wrapper {
+  display: flex;
+  gap: 10px;
   margin-bottom: 20px;
+  justify-content: flex-start;
 }
 
-.search-bar input {
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 24px;
-  border: none;
-  font-size: 1rem;
+.search-bar-wrapper input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #0b1120;
+  font-size: 0.95rem;
   outline: none;
-  box-shadow: 0 0 10px #ffc107aa;
+  background-color: #0b1120;
+  color: #fffdfd;
+  box-shadow: 0 0 8px #ffffff80;
+  transition: all 0.3s ease;
 }
 
-/* Titulo de platillos */
+.search-bar-wrapper input::placeholder {
+  color: #888;
+}
+
+.sort-button {
+  display: none;
+}
+
 .content h2 {
   font-weight: 700;
   font-size: 1.75rem;
   margin-bottom: 16px;
 }
 
-/* Grid de platillos */
 .meal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
 
-/* Tarjetas de cada platillo */
 .meal-card {
-  background-color: #212d45;
-  border-radius: 12px;
+  background-color: #0b1120;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   text-decoration: none;
   color: #c9d1d9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px solid #555a66; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
 }
 
 .meal-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px #ffc107bb;
+  box-shadow: 0 10px 20px #ffffffbb;
 }
 
 .meal-card img {
   width: 100%;
   height: 140px;
   object-fit: cover;
-  border-bottom: 1px solid #ffc107;
+  border-bottom: 1px solid #f8f8f8;
 }
 
 .meal-card p {
@@ -166,4 +193,74 @@
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
+}
+
+/* Responsive: pantallas menores a 768px */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .hero-section {
+    order: 0;
+    margin: 20px 16px 10px;
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .search-bar-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 16px 20px;
+    order: 1;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-color: #121c2c;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    border-radius: 0;
+    order: 2;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 10px;
+    list-style: none;
+  }
+
+  .sort-button {
+    display: block;
+    background-color: #ffc107;
+    color: #121c2c;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    order: 3;
+    margin: 0 16px 20px;
+  }
+
+  .sort-button:hover {
+    background-color: #e0a800;
+  }
+
+  .content {
+    margin: 0 16px 16px;
+    order: 4;
+  }
 }
