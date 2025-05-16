@@ -1,0 +1,169 @@
+/* Contenedor principal con fondo oscuro */
+.layout {
+  display: flex;
+  background-color: #0b1120; /* fondo oscuro */
+  color: #c9d1d9; /* texto claro */
+  height: 100vh;
+  font-family: 'Georgia', serif;
+}
+
+/* Sidebar con categorias */
+.sidebar {
+  width: 250px;
+  background-color: #121c2c;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titulo del sidebar */
+.sidebar h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Lista de categorias */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+/* Cada categoria como botón */
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #c9d1d9;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background-color: #ffc107; /* color amarillo de selección */
+  color: #121c2c; /* texto oscuro */
+  font-weight: 700;
+}
+
+/* Imagen pequeña de categoría */
+.category-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Contenido principal a la derecha */
+.content {
+  flex: 1;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen grande superior */
+.content .hero-image {
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  height: 200px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .hero-image img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Texto encima de la imagen grande */
+.content .hero-text {
+  position: absolute;
+  top: 40px;
+  left: 60%;
+  color: #1f2937; /* gris oscuro */
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  user-select: none;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 24px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 10px #ffc107aa;
+}
+
+/* Titulo de platillos */
+.content h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+}
+
+/* Grid de platillos */
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 20px;
+}
+
+/* Tarjetas de cada platillo */
+.meal-card {
+  background-color: #212d45;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-decoration: none;
+  color: #c9d1d9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #ffc107bb;
+}
+
+.meal-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid #ffc107;
+}
+
+.meal-card p {
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}

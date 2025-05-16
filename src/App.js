@@ -1,4 +1,4 @@
-// src/App.js
+
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -14,6 +14,7 @@ function App() {
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/recipe/:id" element={<RecipePage />} />
       </Routes>
+
     </Router>
   );
 }
