@@ -75,7 +75,7 @@ const RecipePage = () => {
       <p><strong>Categoría:</strong> {meal.strCategory}</p>
 
       <div className="my-4">
-        <h2 className="text-xl font-semibold">Instrucciones</h2>
+        <h2 className="text-xl font-semibold">👨‍🍳Instrucciones👨‍🍳</h2>
         <p>{meal.strInstructions}</p>
       </div>
 

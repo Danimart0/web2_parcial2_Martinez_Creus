@@ -71,7 +71,7 @@ const Home = () => {
             <h1 className="line1">Chefs</h1>
              <h1 className="line2">Academy</h1>
              <h1 className="line3">Secrets</h1>
-             <p className="hero-description">New recipe for you to try out, let's cook!</p>
+     
           </div>
           
         </div>
